@@ -8,6 +8,7 @@
 
 Author: <%= link_to @post.blogger.name, blogger_path(@post.blogger) %>
 <br/>
+Destination: <%= link_to @post.destination.name, destination_path(@post.destination) %>
 <br />
 <br />
-<%= link_to "Like", (@post), method: :patch %>
+<%= link_to "Like", post_upvote_path(@post), method: :patch %> <%= @post.likes %>
